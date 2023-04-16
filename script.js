@@ -51,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
     return playerScore;
     return computerScore;
 }
-
+/*
 function game() {
     for (let i = 0; i < 5; i++) {
   
@@ -83,4 +83,4 @@ function game() {
           `Oh no, the computer beat you ${computerScore} out of 5 rounds...`
         );
       }
-    }
+    }*/
