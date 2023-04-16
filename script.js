@@ -1,12 +1,28 @@
+//Query Selectors for buttons and scores
+const rockBtn = document.querySelector("#rock");
+rockBtn.classList.add("playButtons");
+
+const paperBtn = document.querySelector("#paper");
+paperBtn.classList.add("playButtons");
+
+const scissorsBtn = document.querySelector("#scissors");
+scissorsBtn.classList.add("playButton");
+
+const newGameBtn = document.querySelector("#newGame");
+newGameBtn.classList.add("newGameButton");
+
+const roundScore = document.querySelector("#roundScore");
+const finalScore = document.querySelector("#finalScore");
+const player = document.querySelector("#player");
+const computer = document.querySelector("#computer");
+
+// function that randomly returns the computer's choice
 function getComputerChoice() {
-    let choices = ['rock', 'paper', 'scissors'];
-    let randomIndex = Math.floor(Math.random() * 3);
+  let choices = ['rock', 'paper', 'scissors'];
+  let randomIndex = Math.floor(Math.random() * 3);
 
-    return choices[randomIndex];
+  return choices[randomIndex];
 }
-
-let playerScore = 0;
-let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
 
