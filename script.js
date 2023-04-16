@@ -95,36 +95,20 @@ function playRound(playerSelection, computerSelection) {
     roundScore.appendChild(newLi);
   }
 }
-/*
-function game() {
-    for (let i = 0; i < 5; i++) {
-  
-      let playerSelection = prompt(
-        "Choose rock, paper, or scissors"
-      ).toLowerCase();
-  
-      while (
-        playerSelection !== "rock" &&
-        playerSelection !== "paper" &&
-        playerSelection !== "scissors"
-      ) {
-        playerSelection = prompt(
-          "Choose a valid input: rock, paper, or scissors"
-        ).toLowerCase();
-      }
-  
-      playRound(playerSelection, getComputerChoice());
-    }
 
-    if (playerScore > computerScore) {
-        console.log(
-          `Congrats! You beat the computer ${playerScore} out of 5 rounds!`
-        );
-      } else if (playerScore === computerScore) {
-        console.log("This game ended in a tie. How bizzare.");
-      } else {
-        console.log(
-          `Oh no, the computer beat you ${computerScore} out of 5 rounds...`
-        );
-      }
-    }*/
+// winner and loser delcared when player or computer score equals scoreToReach
+// styles added for winner and loser
+function endGame() {
+  if (playerScore === scoreToReach || computerScore === scoreToReach) {
+    isGameOver = true;
+    if (playerScore === scoreToReach) {
+      finalScore.innerText = "You won the game! Yay!";
+      player.classList.add("winner");
+      computer.classList.add("loser");
+    } else if (computerScore === scoreToReach) {
+      finalScore.innerText = "You lost the game. Maybe next time.";
+      computer.classList.add("winner");
+      player.classList.add("loser");
+    }
+  }
+}
