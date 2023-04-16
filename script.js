@@ -29,6 +29,41 @@ let computerScore = 0;
 let isGameOver = false;
 let scoreToReach = 5;
 
+//Buttons call playRound when clicked and can call endGame when scoreToReach = 5
+rockBtn.addEventListener("click", function(){
+  if (!isGameOver){
+    playRound("rock", getComputerChoice());
+    endGame();
+  }
+})
+
+paperBtn.addEventListener("click", function(){
+  if (!isGameOver){
+    playRound("paper", getComputerChoice());
+    endGame();
+  }
+})
+
+scissorsBtn.addEventListener("click", function(){
+  if (!isGameOver){
+    playRound("scissors", getComputerChoice());
+    endGame();
+  }
+})
+
+//Restart the game by reseting the score, clearing the score log and removing classes
+newGameBtn.addEventListener("click", function(){
+  isGameOver = false;
+  playerScore = 0;
+  computerScore = 0;
+  roundScore.innerText = "";
+  player.innerText = "0";
+  computer.innerText = "0";
+  finalScore.innerText = "";
+  player.classList.remove("winner", "loser");
+  computer.classList.remove("winner", "loser");
+})
+
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === "rock" && computerSelection === "paper") {
