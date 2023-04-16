@@ -23,6 +23,11 @@ function getComputerChoice() {
 
   return choices[randomIndex];
 }
+// Set initial values for the game
+let playerScore = 0;
+let computerScore = 0;
+let isGameOver = false;
+let scoreToReach = 5;
 
 function playRound(playerSelection, computerSelection) {
 
