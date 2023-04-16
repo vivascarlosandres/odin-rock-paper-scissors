@@ -13,6 +13,7 @@ body {
     align-items: center;
     flex-direction: column;
     border: 5px solid #faedcd;
+    border-radius: 8px;
     padding: 30px;
     background-color: #fefae0;
     margin-top: 20px;

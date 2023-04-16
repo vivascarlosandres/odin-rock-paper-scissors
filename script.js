@@ -6,7 +6,7 @@ const paperBtn = document.querySelector("#paper");
 paperBtn.classList.add("playButtons");
 
 const scissorsBtn = document.querySelector("#scissors");
-scissorsBtn.classList.add("playButton");
+scissorsBtn.classList.add("playButtons");
 
 const newGameBtn = document.querySelector("#newGame");
 newGameBtn.classList.add("newGameButton");
